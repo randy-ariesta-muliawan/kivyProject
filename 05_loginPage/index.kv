@@ -1,0 +1,102 @@
+#: import from_hex kivy.utils.get_color_from_hex
+
+<MyLabel@Label>:
+	markup: True #Dicustom
+	font_name: 'Roboto'
+	font_size: 30
+	bold: True
+
+<MyButton@Button>:
+	font_name: 'Roboto'
+	font_size: 25
+	bold: True
+
+<MyCanvas@Widget>:
+
+
+<LoginScreen@Screen>:
+	name: "LoginScreen"
+	MyCanvas:
+		BoxLayout:
+			orientation: "vertical"
+			x: root.x
+			top: root.top - 100
+			size_hint: (None, None)
+			width: root.width
+			height: 120
+			Image:
+				source: "igs.png"
+				size_hint: .50, .50
+				pos_hint: {"center_x":.5, "center_y":.5}
+			#canvas:
+			#	Color:
+			#		rgba: from_hex("#ffffff")
+			#	Rectangle:
+			#		pos: self.center_x - 75, self.center_y - 75
+			#		size: 150, 150
+			#		source: "igs.png"
+
+		BoxLayout:
+			orientation: "vertical"
+			x: root.x
+			top: root.top - 100 - 150
+			size_hint: (None, None)
+			width: root.width
+			height: 230
+			padding: 50
+			spacing: 20
+			MyLabel:
+				id: err_msg
+				color: from_hex("#ff0000")
+				text: ""
+				font_size: 20
+			TextInput:
+				id: username_entry
+				hint_text: "Nama Pengguna"
+				write_tab: False
+				multiline: False
+			TextInput:
+				id: password_entry
+				hint_text: "Kata Sandi"
+				password: True
+				write_tab: False
+				multiline: False
+
+		BoxLayout:
+			orientation: "horizontal"
+			x: root.x
+			top: root.top - 100 - 2*175
+			size_hint: (None, None)
+			width: root.width
+			height: 50
+			padding: [root.width//3, 0, root.width//3, 0]
+
+			MyButton:
+				text: "Masuk"
+				font_size: 15
+				background_color: 0,0,0,0
+				on_press: app.logger()
+
+			
+
+
+
+<HomeScreen@Screen>:
+	name: "HomeScreen"
+	BoxLayout:
+		orientation: "vertical"
+		padding: 50
+		spacing: 20
+
+		MyLabel:
+			text: "Home Screen"
+
+		MyButton:
+			text: "Back"
+
+
+
+ScreenManager:
+	current: "LoginScreen"
+	LoginScreen:
+	HomeScreen:
