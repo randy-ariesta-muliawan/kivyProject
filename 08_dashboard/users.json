@@ -1,0 +1,15 @@
+{
+	"budi_geming" : {
+		"password" : "budiset",
+		"nama_lengkap" : "Budi Jaya Kuadrat Aprilio",
+		"tanggal_lahir" : "32 Januari 1602",
+		"hobi" : "Mendeklarasikan Perang"
+	},
+	"dodi_korupsi" : {
+		"password" : "qwerty",
+		"nama_lengkap" : "Dwi Eka Dodi Reza Alex Deru Widodo Soekarnocucu",
+		"tanggal_lahir" : "01 November 1970",
+		"hobi" : "Mencuri Uang"
+		
+	}
+}
